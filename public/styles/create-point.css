@@ -1,0 +1,190 @@
+#page-create-point {
+    width: 90%;
+    max-width: 1100px;
+
+    /* alinhamento de box pelo lado de fora da box */
+    margin: 0 auto;
+}
+
+#page-create-point header {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#page-create-point header a {
+    color: var(--title-color);
+    font-weight: bolder;
+
+    display: flex;
+    align-items: center;
+}
+
+#page-create-point header a span {
+    margin-right: 16px;
+    background-image: url(../icones/arrow-left.svg);
+    display: flex;
+    width: 20px;
+    height: 24px;
+    
+}
+
+form {
+    background-color: white;
+    margin: 80px auto;
+
+    /* preenchimento: padding (aplicado a todos os lados) */
+    padding: 64px;
+
+    /* bordas arredondadas */
+    border-radius: 8px;
+
+    max-width: 730px;
+    
+    /*para que o padding não ultrapasse o tamanho máximo 
+    da box que coloquei com max-width
+    box-sizing: border-box
+    coloquei no main.css para que seja padrao a todos */
+    
+}
+
+form h1 {
+    font-size: 36px;
+}
+
+form fieldset {
+    margin-top: 64px;
+    border: 0;
+}
+
+form legend {
+    margin-bottom: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+
+}
+
+form legend h2 {
+    font-size: 24px;
+}
+
+form legend span {
+    color: var(--title-color);
+    font-size: 14px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 24px;
+    flex: 1;
+
+}
+
+form .field-group {
+    display: flex;
+}
+
+form input,
+form select {
+    background-color: #f0f0f5;
+    border: 0;
+    padding: 16px 24px;
+    font-size: 16px;
+    /* tirar linha preta dos campos de preenchimento do formulario 
+    outline: none;
+    */
+    border-radius: 8px;   
+}
+
+form select {
+    /* tirar a estilização que o chrome e o firefox fazem no campo select,
+    para implementar a minha */
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form label {
+    font-size: 14px;
+    margin-bottom: 8px; 
+}
+
+form .field-group .field + .field /* pegando o último field apenas */ {
+    margin-left: 24px;
+}
+
+form button {
+    width: 260px;
+    height: 56px;
+    background-color: var(--primary-color);
+    border-radius: 8px;
+
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    border: 0;
+    margin-top: 40px;
+    transition: background-color 400ms;
+
+}
+
+form button:hover {
+    background-color: #2fb86e;
+}
+
+.items-grid {
+    /* com esse display é possível
+    criar linhas e colunas, diferente do flex
+    que é unidimensional 
+    */
+    display: grid;
+    /* configurando três colunas usando frações */
+    grid-template-columns: 1fr 1fr 1fr;
+    /* criar margens e separar os elementos
+    poderia ser feito com margin, ai teria
+    que ser feito para cada elemento */
+     gap: 16px;
+}
+
+.items-grid li {
+    background-color: #f5f5f5;
+    list-style: none;
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+    height: 180px;
+    padding: 32px 24px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    /* mudar o cursor do mouse para mãozinha */
+    cursor: pointer;
+}
+
+.items-grid li span {
+    margin-top: 12px;
+
+    flex: 1;
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+.items-grid li.selected {
+    background: #e1faec;
+    border: 2px solid #34cb79;
+}
+
+.items-grid li img,
+.items-grid li span {
+    pointer-events: none;
+}

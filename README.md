@@ -1,4 +1,4 @@
-# Next Level Week 1.0 - Rocketseat
+# Ecoleta - NLW 1.0 
 
 ## ABOUT 
 

@@ -18,7 +18,7 @@ function populateUFs () {
    
 }
 
-// executando a função
+
 populateUFs()
 
 
@@ -63,7 +63,6 @@ document.querySelector("select[name=uf]")
 .addEventListener("change", getCities)
 
 // itens de coleta
-// pegando todos os li
 
 const itemsToCollect = document.querySelectorAll(".items-grid li")
 
@@ -98,7 +97,7 @@ function handleSelectedItem(event) {
     // se já estiver selecionado, tirar da seleçao no array
 
     if (alreadySelected >= 0) {
-        // tirar da seleção
+    
         const filteredItems = selectedItems.filter( item => {
             const itemIsDifferent = item != itemId // false
             return itemIsDifferent
